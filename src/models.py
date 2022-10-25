@@ -23,10 +23,45 @@ def serialize (self):
         "email":self.email
     }
 
-class Planet (Base):
+"properties": {
+      "diameter": "10465",
+      "rotation_period": "23",
+      "orbital_period": "304",
+      "gravity": "1 standard",
+      "population": "200000",
+      "climate": "arid",
+      "terrain": "desert",
+      "surface_water": "1",
+      "created": "2022-10-24T08:31:56.449Z",
+      "edited": "2022-10-24T08:31:56.449Z",
+      "name": "Tatooine",
+      "url": "https://www.swapi.tech/api/planets/1"
+    },
+    "description": "A planet.",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Planet(Base):
     __tablename__ ="planet"
 
-    id:Column (Integrer, primary_)
+    id:Column (Integrer, primary_key=True)
+    name= Column (String (50,) nullable =false, unique=True)
+    url = Column (String (150,nullable =True))
+    diameter = Column (String (15,nullable=false))
 
 
 class Address(Base):
