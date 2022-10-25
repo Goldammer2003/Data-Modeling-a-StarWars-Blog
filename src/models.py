@@ -41,27 +41,26 @@ def serialize (self):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Planet(Base):
     __tablename__ ="planet"
 
     id:Column (Integrer, primary_key=True)
     name= Column (String (50,) nullable =false, unique=True)
     url = Column (String (150,nullable =True))
-    diameter = Column (String (15,nullable=false))
+    diameter = Column (String (15,nullable=False))
+    population = Column (String (18,nullable=False))
+
+    def serialize (self):
+        return (
+            "id":id.self,
+            "name":name.self,
+            "url": url.self, 
+            "diameter":diameter.self, 
+            "population" population.self 
+        
+        )
+
+        class Character (Base):
 
 
 class Address(Base):
