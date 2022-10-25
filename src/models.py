@@ -46,8 +46,8 @@ class Planet(Base):
 
     id:Column (Integrer, primary_key=True)
     name= Column (String (50,) nullable =false, unique=True)
-    url = Column (String (150,nullable =True))
-    birth year = Column (String (15,nullable=False))
+    url = Column (String (150),nullable =True)
+    birth year = Column (String (15),nullable=False)
     homeworld = Column (String(18),nullable=False)
 
     def serialize (self):
