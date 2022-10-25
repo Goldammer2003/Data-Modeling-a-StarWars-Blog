@@ -61,7 +61,7 @@ class Planet(Base):
         }
 
 class Character (Base):
-    _tablename = "character"
+    __tablename__ = "character"
 
     id = Column (Integer, primary_key=True)
     name= Column (String (50),nullable=False, unique=True)
