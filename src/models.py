@@ -14,6 +14,20 @@ class User(Base):
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
     username = Column(String(50), nullable=False)
+    email = Column (String(50)), nullable = False, unique =True
+
+def serialize (self):
+    return {
+        id:self.id,
+        "username":self.username,
+        "email":self.email
+    }
+
+class Planet (Base):
+    __tablename__ ="planet"
+
+    id:Column (Integrer, primary_)
+
 
 class Address(Base):
     __tablename__ = 'address'
