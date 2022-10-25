@@ -61,7 +61,13 @@ class Planet(Base):
         )
 
         class Character (Base):
+    _tablename = "character"
 
+    id = Column (Integer, primary_key=True)
+    name= Column (String (50,) nullable =false, unique=True)
+    url = Column (String (150),nullable =True)
+    birth year = Column (String (15),nullable=False)
+    homeworld = Column (String(18),nullable=False)
 
 class Address(Base):
     __tablename__ = 'address'
